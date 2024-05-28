@@ -1,0 +1,74 @@
+@import "src/style/global.scss";
+@import "src/style/screen-size.scss";
+
+.Form__Select {
+  height: 44px;
+  border: none !important;
+  height: 44px;
+  font-family: $mts-wide-r;
+  font-size: 18px;  border: none;
+
+  .ant-select-selector {
+    border-radius: 24px;
+    border: none !important;
+    background-color: var(--background-color-secondary) !important;
+    box-shadow: 0px 1px 7px 0px rgba(0, 0, 0, 0.25);
+  }
+
+  .ant-select-item {
+    border-radius: 18px;
+    border: none !important;
+  }
+}
+
+.ant-select-item.ant-select-item-option.Form__SelectOption.ant-select-item-option-active:hover {
+  border-radius: 18px;
+  border: none !important;
+  background-color: var(--background-color-secondary) !important;
+}
+
+.ant-select-selection-item {
+  font-family: $mts-wide-r;
+  font-size: 18px;
+  @include respond-to(lg) {
+    font-size: 16px;
+  }
+  @include respond-to(xs) {
+    font-size: 14px;
+  }
+}
+
+.ant-select-item-option-content {
+  font-family: $mts-wide-r;
+  font-size: 16px;
+  background-color: var(--background-color-secondary) !important;
+  @include respond-to(lg) {
+    font-size: 14px;
+  }
+  @include respond-to(xs) {
+    font-size: 13px;
+  }
+}
+
+.ant-select-item-option-selected {
+  font-family: $mts-wide-m;
+  font-size: 16px;
+  
+
+  @include respond-to(lg) {
+    font-size: 14px;
+  }
+  @include respond-to(xs) {
+    font-size: 13px;
+  }
+}
+
+.rc-virtual-list-holder-inner {
+  background-color: var(--background-color-secondary) !important;
+  gap: 5px;
+}
+
+.ant-select-open {
+  border: none;
+  outline: none;
+}

@@ -1,0 +1,102 @@
+@import "src/style/global.scss";
+@import "src/style/screen-size";
+
+.brigade {
+  display: none;
+  width: 100%;
+  position: relative;
+  background-color: var(--background-color-secondary);
+  border: 2px solid var(--mobile-person-widget);
+  border-radius: 18px;
+  box-shadow: $widget-shadow;
+  margin-bottom: 18px;
+
+  @include respond-to(710px) {
+    display: block;
+  }
+
+  &_title {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    @include respond-to(xs) {
+      gap: 5px;
+    }
+
+    h1 {
+      color: var(--mobile-person-widget);
+      font-family: $mts-wide-m;
+      font-size: 16px;
+      padding-bottom: 2px;
+
+      @include respond-to(xxs) {
+        font-size: 14px;
+      }
+
+      @include respond-to(280px) {
+        font-size: 12px;
+      }
+    }
+
+    &_listShow {
+      border-bottom: 2px solid var(--mobile-person-widget);
+    }
+
+    .svg_cheron {
+      height: 8px;
+      width: 16px;
+
+      @include respond-to(xxs) {
+        height: 6px;
+        width: 12px;
+      }
+
+      path {
+        fill: var(--mobile-person-widget);
+      }
+    }
+  }
+
+  &_list {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+
+    p {
+      height: 100%;
+      padding: 10px 10px;
+      text-align: left;
+      justify-content: center;
+      width: 100%;
+      font-family: $mts-wide-r;
+      font-size: 16px;
+      border-bottom: 1px solid $border-color;
+
+      @include respond-to(xxs) {
+        padding: 6px 10px;
+        font-size: 14px;
+        padding-bottom: 2px;
+      }
+
+      @include respond-to(280px) {
+        font-size: 12px;
+      }
+
+      &:last-child {
+        border: none;
+      }
+    }
+  }
+
+  &_listShow {
+    display: flex !important;
+  }
+}

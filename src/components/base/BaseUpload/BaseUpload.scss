@@ -1,0 +1,85 @@
+@import "src/style/global.scss";
+@import "src/style/screen-size.scss";
+
+.Form__Upload {
+  width: 100%;
+  border-radius: 24px;
+  box-shadow: $filters2-shadow;
+  border: none;
+  padding: 8px 16px;
+  background-color: var(--background-color-secondary);
+  @include respond-to(md) {
+    border-radius: 18px;
+  }
+
+  .ant-upload.ant-upload-select {
+    border-radius: 24px;
+
+    @include respond-to(md) {
+      border-radius: 18px;
+    }
+  }
+
+  
+}
+.ant-upload-wrapper.Form__Upload.css-dev-only-do-not-override-17seli4.ant-upload-picture-card-wrapper {
+  border: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+.ant-upload.ant-upload-select {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.Form__Upload__Button {
+  border-radius: 24px;
+  border: none;
+  background-color: var(--background-color-secondary);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  @include respond-to(md) {
+    border-radius: 18px;
+  }
+
+  .svg_upload {
+    path {
+      fill: var(--fill-icons);
+    }
+
+    @include respond-to(md) {
+      width: 20px;
+      height: 21px;
+    }
+
+    @include respond-to(xs) {
+      width: 18px;
+      height: 19px;
+    }
+  }
+}
+
+.Form__Upload__Text {
+  font-family: $mts-wide-r;
+  font-size: 18px;
+
+  @include respond-to(lg) {
+    font-size: 16px;
+  }
+  @include respond-to(xs) {
+    font-size: 14px;
+  }
+}
+
+.ant-upload-select {
+  width: 633px !important;
+  border-radius: 18px;
+  border: none;
+}
+

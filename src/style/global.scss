@@ -1,0 +1,124 @@
+
+
+@font-face {
+    font-family: 'MTSWide-Bold';
+    src: url("../../public/assets/fonts/Wide/MTSWide-Bold/MTSWide-Bold.woff") format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MTSWide-Medium';
+    src: url("../../public/assets/fonts/Wide/MTSWide-Medium/MTSWide-Medium.woff") format('woff');
+    font-weight: medium;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MTSWide-Regular';
+    src: url("../../public/assets/fonts/Wide/MTSWide-Regular/MTSWide-Regular.woff") format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MTSWide-Light';
+    src: url("../../public/assets/fonts/Wide/MTSWide-Light/MTSWide-Light.woff") format('woff');
+    font-weight: light;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MTSText-Regular';
+    src: url("../../public/assets/fonts/Text/MTSText-Regular/MTSText-Regular.woff") format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MTSText-Medium';
+    src: url("../../public/assets/fonts/Text/MTSText-Medium/MTSText-Medium.woff") format('woff');
+    font-weight: medium;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MTSCompact-Bold';
+    src: url("../../public/assets/fonts/Compact/MTSCompact-Bold/MTSCompact-Bold.woff") format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MTSCompact-Medium';
+    src: url("../../public/assets/fonts/Compact/MTSCompact-Medium/MTSCompact-Medium.woff") format('woff');
+    font-weight: medium;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MTSCompact-Regular';
+    src: url("../../public/assets/fonts/Compact/MTSCompact-Regular/MTSCompact-Regular.woff") format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+$primary-mgts: #007ee8;
+$primary-mts: #ff0032;
+$color-white: #fff;
+$color-black: #000;
+$color-gray: rgba($color-black, 0.5);
+$dark-blue: #005fae;
+$blue: #58b3ff;
+$light-blue: #90ccff;
+$light-light-blue: #c7e6ff;
+$border-color: #bfbfbf;
+$mgts-gradient: linear-gradient(150deg, $blue , $dark-blue );
+
+$bg-dark: #262626;
+$content-dark: #595959;
+$second-content-dark: #3f3f3f;
+$hover-dark: #313131;
+
+$mts-wide-b: 'MTSWide-Bold';
+$mts-wide-m: 'MTSWide-Medium';
+$mts-wide-r: 'MTSWide-Regular';
+$mts-text-r: 'MTSText-Regular';
+$mts-text-m: 'MTSText-Medium';
+$mts-compact-b: 'MTSCompact-Bold';
+$mts-compact-m: 'MTSCompact-Medium';
+$mts-compact-r: 'MTSCompact-Regular';
+
+$shadow-low: 0px 0px 16px 0px rgba(0, 0, 0, 0.08), 0px 4px 16px 0px rgba(0, 0, 0, 0.08);
+$shadow-middle: 0px 4px 24px 0px rgba(0, 0, 0, 0.12), 0px 8px 16px 0px rgba(0, 0, 0, 0.08);
+$notifications-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 12px 20px 0px rgba(0, 0, 0, 0.14);
+$widget-shadow: 0px 3px 14px 4px rgba(0, 0, 0, 0.2);
+$other-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.08), 0px 4px 16px 0px rgba(0, 0, 0, 0.08);
+$button-shadow: 0px 3px 6px 2px rgba(0, 0, 0, 0.2);
+$filters2-shadow: 0px 1px 7px 0px rgba(0, 0, 0, 0.30);
+$filters2-shadow-hover: 0px 1px 7px 0px rgba(0, 0, 0, 0.5);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--text-color);
+    font-family: $mts-text-r;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--background-color-body);
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: none;
+}

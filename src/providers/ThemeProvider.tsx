@@ -1,0 +1,31 @@
+import React, { useState, useEffect } from "react";
+import { ThemeContext, themes } from "../context/ThemeContext";
+
+const getTheme = (): themes => {
+  const theme = window?.localStorage?.getItem("theme") as themes;
+  if (Object.values(themes).includes(theme)) return theme;
+
+  const userMedia = window.matchMedia("(prefers-color-scheme: light)");
+  if (userMedia.matches) return themes.lightMgts;
+
+  return themes.darkMgts;
+};
+
+const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => {
+  const [theme, setTheme] = useState(getTheme());
+
+  useEffect(() => {
+    document.documentElement.dataset.theme = theme;
+    localStorage.setItem("theme", theme);
+  }, [theme]);
+
+  return (
+    <ThemeContext.Provider value={{ theme, setTheme }}>
+      {children}
+    </ThemeContext.Provider>
+  );
+};
+
+export default ThemeProvider;

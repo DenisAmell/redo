@@ -1,0 +1,141 @@
+@import "src/style/global.scss";
+@import "src/style/screen-size.scss";
+
+.Folder {
+  position: relative;
+  padding: 24px 28px;
+  border-radius: 24px;
+  border: 1px solid $border-color;
+  flex: 1 0 0;
+  min-width: 400px;
+
+  @include respond-to(lg) {
+    min-width: 300px;
+  }
+
+  @include respond-to(650px) {
+    padding: 14px 18px;
+  }
+
+  @include respond-to(440px) {
+    min-width: 220px;
+  }
+
+  @include respond-to(330px) {
+    padding: 10px 14px;
+  }
+
+  &__Title {
+    position: absolute;
+    left: 26px;
+    top: -17px;
+    font-family: $mts-wide-b;
+    font-size: 20px;
+    background-color: var(--background-notif-window);
+    color: var(--text-color);
+    padding: 0 4px;
+
+    @include respond-to(lg) {
+      left: 26px;
+      top: -18px;
+      font-size: 18px;
+    }
+
+    @include respond-to(440px) {
+      font-size: 16px;
+      left: 22px;
+      top: -18px;
+      max-height: 23px;
+      min-width: max-content;
+    }
+    @include respond-to(330px) {
+      font-size: 14px;
+    }
+  }
+
+  &__Content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    h3 {
+      font-family: $mts-wide-m;
+      font-size: 18px;
+      line-height: normal;
+
+      @include respond-to(lg) {
+        font-size: 16px;
+      }
+
+      @include respond-to(440px) {
+        font-size: 14px;
+      }
+      @include respond-to(330px) {
+        font-size: 12px;
+      }
+    }
+
+    &__Switcher {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+      justify-content: first baseline;
+
+      &__Item {
+        width: 100%;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        padding: 10px 16px;
+        border-radius: 18px;
+        background: var(--background-color-secondary);
+        box-shadow: $filters2-shadow;
+        box-sizing: border-box;
+        cursor: pointer;
+
+        @include respond-to(440px) {
+          height: 38px;
+          padding: 6px 10px;
+        }
+
+        &:hover {
+          box-shadow: $filters2-shadow-hover;
+        }
+
+        &__isSelected {
+          padding: 8px 14px;
+          background: linear-gradient(var(--background-color-secondary), var(--background-color-secondary)) padding-box,
+              var(--gradient) border-box;
+          border: 2px solid transparent;
+          border-radius: 15px;
+        }
+
+        &__isToggle {
+          justify-content: space-between;
+        }
+
+        p {
+          line-height: 100%;
+          color: var(--text-color);
+          font-family: $mts-wide-r;
+          font-size: 18px;
+          margin-bottom: 3px;
+          
+          @include respond-to(lg) {
+            font-size: 16px;
+          }
+
+          @include respond-to(440px) {
+            font-size: 14px;
+            margin-bottom: 1px;
+          }
+          @include respond-to(330px) {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}

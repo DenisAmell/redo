@@ -1,0 +1,74 @@
+@import "src/style/global.scss";
+@import "src/style/screen-size.scss";
+
+.content {
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  background-color: var(--background-color-body);
+  gap: 20px;
+  padding: 24px;
+
+  @include respond-to(1370px) {
+    padding: 20px;
+  }
+
+  @include respond-to(lg) {
+    padding: 16px;
+  }
+
+  @include respond-to(710px) {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .reorder {
+    width: 100%;
+  }
+
+  .content-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .right-container {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+
+    &_btns {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      @include respond-to(1390px) {
+        gap: 16px;
+      }
+    }
+
+    @include respond-to(710px) {
+      display: none;
+    }
+
+    @include respond-to(1390px) {
+      gap: 45px;
+    }
+  }
+}
+
+
+.widget-container {
+  background: var(--background-color-body);
+  display: flex;
+  width: 100%;
+  height: fit-content;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  @include respond-to(710px) {
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+

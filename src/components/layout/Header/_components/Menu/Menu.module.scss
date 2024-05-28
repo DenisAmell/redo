@@ -1,0 +1,54 @@
+@import "src/style/global.scss";
+@import "src/style/screen-size.scss";
+
+.menu {
+  position: fixed;
+  top: 75px;
+  width: 366px;
+  padding: 20px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: var(--background-color-secondary);
+  box-shadow: $widget-shadow;
+  border-radius: 24px;
+
+  @include respond-to(1390px) {
+    top: 75px;
+    width: 340px;
+    gap: 14px;
+  }
+
+  @include respond-to(1370px) {
+    top: 65px;
+    width: 340px;
+    gap: 12px;
+  }
+
+  @include respond-to(1260px) {
+    width: 320px;
+  }
+
+  @include respond-to(lg) {
+    top: 55px;
+    width: 300px;
+    gap: 10px;
+    padding: 16px 10px;
+  }
+
+  @include respond-to(md) {
+    top: 50px;
+    right: 20px;
+    width: 260px;
+    gap: 10px;
+    padding: 16px 10px;
+  }
+
+  @include respond-to(710px) {
+    position: absolute;
+    top: 50px;
+    right: 50%;
+    transform: translate(50%, 0);
+    width: 90%;
+  }
+}

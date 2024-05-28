@@ -1,0 +1,271 @@
+@import "src/style/global.scss";
+@import "src/style/screen-size.scss";
+
+.close {
+  display: none !important;
+}
+
+.click {
+  gap: 0 !important;
+}
+
+.notification {
+  background-color: var(--background-color-secondary);
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  align-items: flex-start;
+  gap: 20px;
+  border-radius: 24px;
+  box-shadow: var(--notification-in-window-shadow);
+  box-sizing: border-box;
+  width: 436px;
+
+  @include respond-to(1370px) {
+    gap: 16px;
+  }
+
+  @include respond-to(1260px) {
+    padding: 8px;
+    gap: 10px;
+    width: 400px;
+  }
+
+  @include respond-to(lg) {
+    gap: 8px;
+  }
+
+  @include respond-to(xs) {
+    width: 320px;
+  }
+
+  @include respond-to(xxs) {
+    width: 280px;
+  }
+
+  @include respond-to(310px) {
+    width: 220px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &:hover {
+    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.16),
+      0px 4px 16px 0px rgba(0, 0, 0, 0.16);
+  }
+
+  &__inner {
+    display: flex;
+    padding: 10px;
+    align-items: flex-start;
+    gap: 20px;
+
+    @include respond-to(lg) {
+      gap: 12px;
+    }
+
+    @include respond-to(xs) {
+      padding: 5px;
+    }
+
+    .redo_logo {
+      min-width: 32px;
+      min-height: 32px;
+      border-radius: 6px;
+      background-image: var(--redo-logo);
+      background-position: center;
+      background-size: cover;
+
+      @include respond-to(lg) {
+        gap: 8px;
+        min-width: 30px;
+        min-height: 30px;
+      }
+
+      @include respond-to(md) {
+        gap: 8px;
+        min-width: 26px;
+        min-height: 26px;
+      }
+    }
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4px;
+
+      h1 {
+        color: var(--text-color);
+        font-feature-settings: "clig" off, "liga" off;
+
+        font-family: $mts-compact-b;
+        font-size: 14px;
+        line-height: 20px;
+
+        @include respond-to(xs) {
+          font-size: 12px;
+        }
+      }
+
+      p {
+        color: var(--text-color);
+        font-feature-settings: "clig" off, "liga" off;
+        font-family: $mts-compact-r;
+        font-size: 14px;
+        line-height: 20px;
+
+        @include respond-to(xs) {
+          font-size: 12px;
+        }
+      }
+
+      .details {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        cursor: pointer;
+
+        p {
+          color: var(--text-color);
+          font-family: $mts-compact-m;
+          font-size: 13px;
+          line-height: 20px;
+
+          @include respond-to(xs) {
+            font-size: 11px;
+          }
+        }
+
+        .svg_charon {
+          width: 12px;
+          height: 6px;
+          path {
+            fill: var(--fill-icons);
+          }
+
+          @include respond-to(xs) {
+            width: 10px;
+            height: 5px;
+          }
+        }
+      }
+
+      .detailsText {
+        color: var(--text-color);
+        font-family: $mts-compact-r;
+        font-size: 14px;
+        line-height: 20px;
+        font-feature-settings: "clig" off, "liga" off;
+        line-height: 20px;
+
+        @include respond-to(xs) {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  .cross {
+    width: 24px;
+    height: 24px;
+    path {
+      fill: var(--fill-icons);
+    }
+    cursor: pointer;
+
+    @include respond-to(md) {
+      width: 22px;
+      height: 22px;
+    }
+  }
+
+  .buttonsContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+
+    @include respond-to(xs) {
+      gap: 10px;
+    }
+
+    @include respond-to(xxs) {
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .button {
+      height: 28px;
+      display: flex;
+      gap: 2px;
+      padding: 0px 8px;
+      justify-content: center;
+      align-items: center;
+      border-radius: 8px;
+      background: var(--background-color-secondary);
+      box-shadow: $shadow-low;
+
+      .svg_icon {
+        width: 24px;
+        height: 24px;
+
+        @include respond-to(xs) {
+          width: 20px;
+          height: 20px;
+        }
+
+        path {
+          fill: var(--fill-icons);
+        }
+      }
+
+      @include respond-to(xs) {
+        height: 26px;
+        padding: 0px 6px;
+      }
+      @include respond-to(xxs) {
+        margin: 0 8px;
+        height: 28px;
+      }
+
+      &:hover {
+        box-shadow: $shadow-middle;
+      }
+
+      p {
+        padding-bottom: 4px;
+        color: var(--text-color);
+        text-align: center;
+        font-feature-settings: "clig" off, "liga" off;
+        font-family: $mts-text-r;
+        font-size: 14px;
+        line-height: 20px;
+
+        @include respond-to(xs) {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+.cross {
+  min-width: 24px;
+  min-height: 24px;
+  cursor: pointer;
+
+  path {
+    fill: var(--fill-icons);
+  }
+
+  @include respond-to(md) {
+    min-width: 22px;
+    min-height: 22px;
+  }
+}

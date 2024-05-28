@@ -1,0 +1,564 @@
+@import "src/style/global.scss";
+@import "src/style/screen-size.scss";
+@import "../../../App.scss";
+
+.container {
+  position: relative;
+  z-index: 4;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  padding: 12px 23px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--background-color);
+  box-shadow: $shadow-low;
+  border-radius: 0px 0px 24px 24px;
+  z-index: 4;
+
+  @include respond-to(1370px) {
+    padding: 10px 20px;
+  }
+
+  @include respond-to(lg) {
+    padding: 8px 16px;
+  }
+
+  @include respond-to(md) {
+    border-radius: 0px 0px 20px 20px;
+  }
+
+  @include respond-to(sm) {
+    border-radius: 0px 0px 18px 18px;
+  }
+
+  .logo {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+
+    .svg_logo {
+      width: 40px;
+      height: 40px;
+
+      path {
+        fill: #c74343;
+      }
+    }
+
+    .redo_logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 6px;
+      background-image: var(--redo-logo);
+      background-position: center;
+      background-size: cover;
+
+      @include respond-to(1370px) {
+        width: 34px;
+        height: 34px;
+      }
+
+      @include respond-to(lg) {
+        width: 30px;
+        height: 30px;
+        border-radius: 5px;
+      }
+
+      @include respond-to(md) {
+        width: 26px;
+        height: 26px;
+      }
+    }
+
+    .mgtsLogo {
+      width: 40px;
+      height: 40px;
+      border-radius: 6px;
+      background-position: center;
+      background-image: var(--logo);
+      background-size: cover;
+
+      @include respond-to(1370px) {
+        width: 34px;
+        height: 34px;
+      }
+
+      @include respond-to(lg) {
+        width: 30px;
+        height: 30px;
+        border-radius: 5px;
+      }
+
+      @include respond-to(md) {
+        width: 26px;
+        height: 26px;
+      }
+
+      @include respond-to(630px) {
+        display: none;
+      }
+    }
+
+    .nameDiv {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 0;
+      cursor: pointer;
+
+      .name {
+        font-family: $mts-wide-b;
+        font-size: 24px;
+        background: var(--color-redo);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        @include respond-to(1370px) {
+          font-size: 20px;
+        }
+
+        @include respond-to(lg) {
+          font-size: 18px;
+        }
+
+        @include respond-to(sm) {
+          font-size: 16px;
+        }
+      }
+
+      @include respond-to(730px) {
+        display: none;
+      }
+    }
+
+    @include respond-to(md) {
+      gap: 6px;
+    }
+
+    @include respond-to(sm) {
+      gap: 4px;
+    }
+
+    .service {
+      display: none;
+      width: 26px;
+      height: 26px;
+      padding: 3.5px 5px;
+      cursor: pointer;
+      border-radius: 6px;
+      background: var(--background-color-secondary);
+      box-shadow: $shadow-low;
+      transition: flex 0.3s, width 0.3s;
+
+      &:hover {
+        box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.13),
+          0px 4px 14px 0px rgba(0, 0, 0, 0.13);
+      }
+
+      @include respond-to(630px) {
+        display: block;
+        flex: 0;
+        width: auto;
+      }
+
+      img {
+        width: 16px;
+        height: 16px;
+      }
+
+      input {
+        display: none;
+      }
+
+      &__searchMobile {
+        flex: 1;
+        padding: 3px 5px;
+        margin: 0 4px 0 0;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+        background: var(--background-color-secondary);
+        border-radius: 6px;
+        box-shadow: $shadow-low;
+        transition: flex 0.3s, width 0.3s;
+
+        @include respond-to(630px) {
+          display: flex;
+          flex: 1;
+          width: 100%;
+        }
+
+        &:focus-within {
+          box-shadow: 0px 0px 6px 0px $light-light-blue,
+            0px 4px 16px 0px $light-light-blue;
+        }
+
+        img {
+          width: 16px;
+          height: 16px;
+        }
+
+        input {
+          display: block;
+          width: 100%;
+          border: none;
+          outline: none;
+          font-family: $mts-text-r;
+          font-size: 12px;
+        }
+      }
+    }
+
+    @include respond-to(630px) {
+      flex: 1;
+    }
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+
+    @include respond-to(1370px) {
+      gap: 16px;
+    }
+
+    @include respond-to(lg) {
+      gap: 12px;
+    }
+
+    @include respond-to(sm) {
+      gap: 8px;
+    }
+  }
+
+  .link {
+    font-family: $mts-wide-m;
+    font-size: 22px;
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+    background: linear-gradient(
+        145deg,
+        var(--primary-color),
+        var(--primary-color)
+      )
+      no-repeat right bottom / 0 2px;
+    transition: background-size 350ms;
+    padding-bottom: 2px;
+
+    &:where(:hover, :focus-visible) {
+      background-size: 100% 2px;
+      background-position-x: left;
+    }
+
+    @include respond-to(1370px) {
+      font-size: 18px;
+    }
+
+    @include respond-to(lg) {
+      font-size: 16px;
+    }
+
+    @include respond-to(sm) {
+      font-size: 14px;
+    }
+
+    @include respond-to(630px) {
+      display: none;
+    }
+  }
+
+  .search {
+    max-width: 275px;
+    display: flex;
+    padding: 8px 9px;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--background-color-input);
+    border-radius: 8px;
+    box-shadow: $shadow-low;
+
+    &:focus-within {
+      box-shadow: 0px 0px 16px 0px rgba(144, 204, 255, 0.45),
+        0px 4px 16px 0px rgba(144, 204, 255, 0.45);
+    }
+
+    .svg_search {
+      width: 26px;
+      height: 26px;
+
+      path {
+        fill: var(--fill-icons);
+      }
+
+      @include respond-to(1370px) {
+        width: 22px;
+        height: 22px;
+      }
+
+      @include respond-to(lg) {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    input {
+      width: 100%;
+      border: none;
+      outline: none;
+      font-family: $mts-text-r;
+      font-size: 18px;
+      background-color: var(--background-color-input);
+
+      @include respond-to(1370px) {
+        font-size: 16px;
+      }
+
+      @include respond-to(lg) {
+        font-size: 14px;
+      }
+
+      @include respond-to(sm) {
+        font-size: 12px;
+      }
+    }
+
+    @include respond-to(1370px) {
+      max-width: 200px;
+      padding: 4px 6px;
+    }
+
+    @include respond-to(lg) {
+      max-width: 180px;
+      border-radius: 6px;
+    }
+
+    @include respond-to(md) {
+      padding: 3px 5px;
+      max-width: 140px;
+    }
+
+    @include respond-to(630px) {
+      display: none;
+    }
+  }
+
+  .lk {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+
+      @include respond-to(1370px) {
+        width: 34px;
+        height: 34px;
+      }
+
+      @include respond-to(lg) {
+        width: 30px;
+        height: 30px;
+        border-radius: 5px;
+      }
+    }
+
+    @include respond-to(md) {
+      img {
+        display: none;
+      }
+      a {
+        display: none;
+      }
+    }
+  }
+
+  .services {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    opacity: 1;
+    transition: opacity 1s, visibility 0s;
+
+    .service {
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      border-radius: 6px;
+      background: var(--background-color-secondary);
+      box-shadow: $shadow-low;
+
+      path {
+        fill: var(--fill-icons);
+      }
+
+      &:hover {
+        box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.13),
+          0px 4px 14px 0px rgba(0, 0, 0, 0.13);
+      }
+
+      @include respond-to(1370px) {
+        width: 34px;
+        height: 34px;
+      }
+
+      @include respond-to(lg) {
+        width: 30px;
+        height: 30px;
+
+        border-radius: 5px;
+      }
+
+      @include respond-to(md) {
+        width: 26px;
+        height: 26px;
+      }
+    }
+
+    .allProducts {
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: $shadow-low;
+      background: var(--background-color-secondary);
+
+      .svg_all_products {
+        width: 27px;
+        height: 27px;
+
+        @include respond-to(1370px) {
+          width: 25px;
+          height: 25px;
+        }
+
+        @include respond-to(lg) {
+          width: 22px;
+          height: 22px;
+
+          border-radius: 5px;
+        }
+
+        @include respond-to(md) {
+          width: 20px;
+          height: 20px;
+        }
+
+        rect {
+          &:last-child {
+            fill: var(--fill-icon-service);
+          }
+        }
+
+        &:hover {
+          rect {
+            &:last-child {
+              fill: var(--fill-icon-service-hover);
+            }
+          }
+        }
+      }
+
+      @include respond-to(1370px) {
+        width: 34px;
+        height: 34px;
+      }
+
+      @include respond-to(lg) {
+        width: 30px;
+        height: 30px;
+
+        border-radius: 5px;
+      }
+
+      @include respond-to(md) {
+        width: 26px;
+        height: 26px;
+      }
+    }
+
+    .avatar {
+      width: 26px;
+      height: 26px;
+      cursor: pointer;
+      display: none;
+      border-radius: 50%;
+
+      @include respond-to(md) {
+        display: block;
+      }
+    }
+
+    @include respond-to(sm) {
+      gap: 4px;
+    }
+
+    &__hidden {
+      display: none !important;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 1s, visibility 0s 1s;
+    }
+    .notificationCounter {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .counter {
+        position: absolute;
+        top: 6px;
+        right: 3px;
+        // width: 16px;
+        height: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        background-color: $primary_mts;
+        border-radius: 50%;
+        padding: 0 4px 2px 4px;
+
+        color: #fff;
+        font-family: $mts-wide-b;
+        font-size: 12px;
+        line-height: normal;
+
+        @include respond-to(1370px) {
+          height: 14px;
+          font-size: 10px;
+        }
+
+        @include respond-to(lg) {
+          padding: 0 2px 1px 2px;
+          height: 10px;
+          font-size: 8px;
+        }
+      }
+    }
+  }
+}
+
+.svg_search_mobile {
+  width: 16px;
+  height: 16px;
+  path {
+    fill: var(--fill-icons);
+  }
+}

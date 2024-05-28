@@ -1,0 +1,164 @@
+@import "src/style/global.scss";
+@import "src/style/screen-size.scss";
+
+.widget {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--background-color-secondary);
+  height: fit-content;
+  width: 449px;
+  cursor: pointer;
+  border-radius: 24px;
+  box-shadow: $widget-shadow;
+
+  @include respond-to(1421px) {
+    width: 420px;
+  }
+
+  @include respond-to(1390px) {
+    width: 400px;
+  }
+
+  @include respond-to(1260px) {
+    width: 370px;
+  }
+
+  @include respond-to(1140px) {
+    width: 350px;
+  }
+
+  @include respond-to(1100px) {
+    width: 330px;
+  }
+
+  @include respond-to(1060px) {
+    width: 320px;
+  }
+
+  @include respond-to(1032px) {
+    width: 310px;
+  }
+
+  @include respond-to(md) {
+    border-radius: 18px;
+    width: 290px;
+  }
+
+  @include respond-to(948px) {
+    border-radius: 18px;
+    width: 280px;
+  }
+
+  @include respond-to(928px) {
+    border-radius: 18px;
+    width: 390px;
+  }
+
+  @include respond-to(730px) {
+    border-radius: 18px;
+    width: 370px;
+  }
+
+  @include respond-to(710px) {
+    border-radius: 18px;
+    height: fit-content;
+    width: 85vw;
+  }
+
+  @include respond-to(500px) {
+    width: 90vw;
+  }
+
+  @include respond-to(390px) {
+    width: 95vw;
+  }
+
+  @include respond-to(xs) {
+    border-radius: 18px;
+  }
+
+  .title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: $mts-wide-b;
+    font-size: 24px;
+    padding: 21px 0;
+    border-bottom: 1px solid $border-color;
+
+    @include respond-to(1390px) {
+      font-size: 20px;
+      padding: 14px 0;
+    }
+
+    @include respond-to(1260px) {
+      font-size: 18px;
+      padding: 11px;
+    }
+
+    @include respond-to(1012px) {
+      font-size: 16px;
+    }
+
+    @include respond-to(xxs) {
+      font-size: 14px;
+    }
+
+    @include respond-to(280px) {
+      font-size: 12px;
+    }
+  }
+
+  .inner {
+    padding: 0 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &_line {
+      display: flex;
+      flex-direction: row;
+      gap: 4px;
+      width: 100%;
+
+      &_item {
+        width: 100%;
+        padding: 14px 0;
+        color: var(--text-color);
+        text-align: center;
+        font-family: $mts-text-r;
+        font-size: 22px;
+        line-height: normal;
+        border-bottom: 1px solid $border-color;
+
+        @include respond-to(1390px) {
+          font-size: 20px;
+          padding: 12px 0;
+        }
+
+        @include respond-to(1260px) {
+          font-size: 18px;
+          padding: 10px 0;
+        }
+
+        @include respond-to(1012px) {
+          font-size: 16px;
+        }
+
+        @include respond-to(xxs) {
+          font-size: 14px;
+        }
+
+        @include respond-to(280px) {
+          font-size: 12px;
+        }
+      }
+    }
+
+    &_line:last-child .inner_line_item {
+      border: none !important;
+    }
+  }
+}

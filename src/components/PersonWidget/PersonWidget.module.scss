@@ -1,0 +1,241 @@
+@import "src/style/global.scss";
+@import "src/style/screen-size";
+
+.person {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-width: max-content;
+  height: fit-content;
+  border-radius: 24px;
+  box-shadow: $widget-shadow;
+  background: var(--background-color-secondary);
+
+  @include respond-to(710px) {
+    display: none;
+  }
+
+  .person_title {
+    gap: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+
+    @include respond-to(1390px) {
+      padding: 10px 16px;
+      gap: 20px;
+    }
+
+    @include respond-to(1260px) {
+      gap: 12px;
+    }
+
+    @include respond-to(1060px) {
+      padding: 10px 12px;
+    }
+
+    @include respond-to(1012px) {
+      padding: 10px 8px;
+    }
+
+    p {
+      font-family: $mts-wide-m;
+      font-weight: 500;
+      color: var(--text-color);
+      font-size: 22px;
+
+      @include respond-to(1390px) {
+        font-size: 20px;
+      }
+
+      @include respond-to(1260px) {
+        font-size: 18px;
+      }
+
+      @include respond-to(1012px) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .info {
+    display: flex;
+    font-family: $mts-wide-r;
+    font-size: 22px;
+    font-weight: 100;
+    width: 100%;
+    border-top: 1px solid $border-color;
+    text-align: left;
+    padding: 24px 21px;
+
+    @include respond-to(1390px) {
+      font-size: 18px;
+      padding: 10px 16px;
+    }
+
+    @include respond-to(1260px) {
+      font-size: 16px;
+    }
+
+    @include respond-to(1060px) {
+      padding: 10px 12px;
+    }
+
+    @include respond-to(1012px) {
+      font-size: 16px;
+      padding: 10px 8px;
+    }
+  }
+
+  .person_info {
+    width: 100%;
+    padding: 20px;
+    border-top: 1px solid $border-color;
+    justify-content: space-between;
+    gap: 20px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    @include respond-to(1390px) {
+      padding: 10px 16px;
+      gap: 14px 0;
+    }
+
+    @include respond-to(1260px) {
+      gap: 10px 0;
+    }
+
+    @include respond-to(1060px) {
+      padding: 10px 12px;
+    }
+
+    @include respond-to(1012px) {
+      padding: 10px 8px;
+    }
+
+    div {
+      font-family: $mts-wide-r;
+      font-size: 20px;
+
+      @include respond-to(1390px) {
+        font-size: 16px;
+      }
+
+      @include respond-to(1260px) {
+        font-size: 14px;
+      }
+
+      p {
+        font-family: $mts-text-r;
+        font-size: 16px;
+        color: #a6a6a6;
+
+        @include respond-to(1390px) {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  &_brigade {
+    width: 100%;
+    position: relative;
+
+    &_title {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      padding: 18px;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid $border-color;
+      cursor: pointer;
+
+      @include respond-to(1390px) {
+        padding: 10px 14px;
+      }
+
+      @include respond-to(1260px) {
+        gap: 5px;
+      }
+
+      @include respond-to(1012px) {
+        padding: 10px 8px;
+      }
+
+      h1 {
+        font-family: $mts-wide-m;
+        font-size: 24px;
+        padding-bottom: 6px;
+
+        @include respond-to(1390px) {
+          font-size: 20px;
+        }
+
+        @include respond-to(1260px) {
+          font-size: 18px;
+          padding-bottom: 3px;
+        }
+
+        @include respond-to(1012px) {
+          font-size: 16px;
+        }
+      }
+    }
+
+    .svg_cheron {
+      path {
+        fill: var(--fill-icons);
+      }
+    }
+
+    img {
+      height: 9px;
+      width: 18px;
+
+      @include respond-to(1260px) {
+        height: 8px;
+        width: 16px;
+      }
+    }
+
+    &_list {
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      display: none;
+
+      p {
+        padding: 18px 20px;
+        text-align: left;
+        width: 100%;
+        font-family: $mts-wide-r;
+        font-size: 22px;
+        border-bottom: 1px solid $border-color;
+
+        @include respond-to(1390px) {
+          font-size: 18px;
+          padding: 14px 14px;
+        }
+
+        @include respond-to(1260px) {
+          font-size: 14px;
+          padding: 10px 12px;
+        }
+
+        @include respond-to(1012px) {
+          padding: 10px 8px;
+        }
+      }
+    }
+
+    &_listShow {
+      display: flex;
+    }
+  }
+}

@@ -1,0 +1,311 @@
+@import "src/style/global.scss";
+@import "src/style/screen-size.scss";
+
+.Settings__Content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 700px;
+  min-width: 85vw;
+  width: 100%;
+  border-radius: 24px;
+  background-color: var(--background-notif-window);
+  overflow-x: hidden;
+  overflow-y: hidden;
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  @include respond-to(md) {
+    border-radius: 18px;
+  }
+
+  @include respond-to(sm) {
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    width: 95%;
+  }
+
+  &__Container {
+    min-height: 95vh;
+    max-height: 95vh;
+    min-width: 85vw;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    @include respond-to(xs) {
+      max-height: 94vh;
+      gap: 14px;
+    }
+
+    &::-webkit-scrollbar {
+      width: 8px;
+      height: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $border-color;
+      border-radius: 5px;
+    }
+  }
+
+  &__Close {
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    path {
+      fill: var(--fill-icons);
+    }
+  }
+
+  &__TitleContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 70px;
+    align-items: end;
+    border-bottom: 1px solid $border-color;
+
+    @include respond-to(lg) {
+      gap: 50px;
+    }
+
+    @include respond-to(md) {
+      gap: 40px;
+    }
+
+    @include respond-to(670px) {
+      gap: 30px;
+    }
+    @include respond-to(xs) {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: left;
+      gap: 0px;
+    }
+  }
+
+  &__Title {
+    text-align: left;
+    padding: 20px 28px 10px 28px;
+    font-family: $mts-wide-b;
+    font-size: 24px;
+
+    @include respond-to(1390px) {
+      font-size: 22px;
+    }
+
+    @include respond-to(lg) {
+      font-size: 18px;
+    }
+
+    @include respond-to(sm) {
+      padding: 16px 16px 10px 16px;
+    }
+
+    @include respond-to(650px) {
+      font-size: 20px;
+      padding: 16px 16px 8px 16px;
+    }
+
+    @include respond-to(xxs) {
+      font-size: 18px;
+    }
+  }
+
+  &__Tabs {
+    display: flex;
+    flex-direction: row;
+    gap: 28px;
+    padding-bottom: 8px;
+
+    @include respond-to(1370px) {
+      padding-bottom: 5px;
+    }
+
+    @include respond-to(md) {
+      gap: 20px;
+    }
+
+    @include respond-to(650px) {
+      padding-right: 70px;
+      flex: 1;
+      justify-content: space-between;
+    }
+
+    @include respond-to(xs) {
+      padding-right: 0;
+      flex: 1;
+      width: 100%;
+      justify-content: space-evenly;
+    }
+  }
+
+  &__Tab {
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+    height: 36px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+    background: linear-gradient(
+        145deg,
+        var(--primary-color),
+        var(--primary-color)
+      )
+      no-repeat right bottom / 0 2px;
+    transition: background-size 350ms;
+
+    &:where(:hover, :focus-visible) {
+      background-size: 100% 2px;
+      background-position-x: left;
+    }
+
+    @include respond-to(lg) {
+      height: 30px;
+    }
+
+    @include respond-to(xs) {
+      width: 55px;
+    }
+
+    &__isOpened {
+      background: linear-gradient(
+          145deg,
+          var(--primary-color),
+          var(--primary-color)
+        )
+        no-repeat right bottom / 100% 2px;
+      transition: background-size 0ms;
+
+      &:where(:hover, :focus-visible) {
+        background-size: 100% 2px;
+        background-position-x: left;
+      }
+    }
+
+    .Settings__Content__Img {
+      height: 24px;
+      width: 24px;
+
+      path {
+        fill: var(--fill-icons);
+      }
+
+      @include respond-to(lg) {
+        height: 20px;
+        width: 20px;
+      }
+
+      @include respond-to(650px) {
+        height: 32px;
+        width: 32px;
+      }
+
+      @include respond-to(xs) {
+        padding-bottom: 2px;
+      }
+    }
+
+    h2 {
+      font-family: $mts-text-m;
+      font-size: 22px;
+      padding-bottom: 4px;
+
+      @include respond-to(1370px) {
+        font-size: 18px;
+      }
+
+      @include respond-to(lg) {
+        font-size: 16px;
+      }
+
+      @include respond-to(sm) {
+        font-size: 14px;
+      }
+
+      @include respond-to(650px) {
+        display: none;
+      }
+    }
+  }
+
+  &__Inner {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+    padding: 10px 38px 64px 38px;
+
+    @include respond-to(1595px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 28px;
+    }
+
+    @include respond-to(1020px) {
+      padding: 10px 16px 24px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    @include respond-to(xs) {
+      padding: 10px 16px 24px 16px;
+      gap: 28px;
+    }
+
+    &__Text {
+      font-family: $mts-wide-m;
+      font-size: 22px;
+      margin-bottom: 10px;
+
+      @include respond-to(1390px) {
+        font-size: 20px;
+      }
+
+      @include respond-to(lg) {
+        font-size: 16px;
+      }
+
+      @include respond-to(sm) {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.System__Form {
+  width: 100%;
+  padding: 24px 32px;
+  display: flex;
+  flex-direction: column;
+
+  @include respond-to(sm) {
+    padding: 16px;
+  }
+}
+
+// .ant-form-item {
+//   @include respond-to(sm) {
+//     margin-bottom: 16px;
+//   }
+// }

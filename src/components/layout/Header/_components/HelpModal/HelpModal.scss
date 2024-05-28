@@ -1,0 +1,150 @@
+@import "src/style/global.scss";
+@import "src/style/screen-size.scss";
+
+.ReactModal__Overlay {
+  opacity: 0;
+  transition: opacity 0.1 ease;
+  
+
+  &--after-open {
+    opacity: 1;
+  }
+
+  &--before-close {
+    opacity: 0;
+  }
+}
+
+.BaseModal__Overlay {
+  position: fixed;
+  background-color: rgba($color-black, 0.5);
+  inset: 0;
+  padding: 32px;
+  z-index: 100;
+}
+
+.BaseModal__Content__Container {
+  min-height: fit-content;
+  max-height: 85vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  @include respond-to(xs) {
+    max-height: 94vh;
+  }
+
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $border-color;
+    border-radius: 5px;
+  }
+}
+
+.BaseModal__Content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 700px;
+  width: 100%;
+  border-radius: 24px;
+  background-color: var(--background-color);
+  overflow-x: hidden;
+  overflow-y: hidden;
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  @include respond-to(md) {
+    border-radius: 18px;
+  }
+
+  @include respond-to(sm) {
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    width: 95%;
+  }
+
+  &__Close {
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+
+    path {
+      fill: var(--fill-icons)
+    }
+  }
+
+  &__Title {
+    text-align: left;
+    padding: 24px 32px;
+    font-family: $mts-wide-b;
+    font-size: 24px;
+    border-bottom: 1px solid $border-color;
+
+    @include respond-to(1390px) {
+      font-size: 22px;
+    }
+
+    @include respond-to(lg) {
+      font-size: 18px;
+    }
+
+    @include respond-to(sm) {
+      font-size: 16px;
+      padding: 16px;
+    }
+  }
+
+  &__Inner {
+    width: 100%;
+
+    &__Text {
+      font-family: $mts-wide-m;
+      font-size: 22px;
+      margin-bottom: 10px;
+
+      @include respond-to(1390px) {
+        font-size: 20px;
+      }
+
+      @include respond-to(lg) {
+        font-size: 16px;
+      }
+
+      @include respond-to(sm) {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.HelpModal__Form {
+  width: 100%;
+  padding: 24px 32px;
+  display: flex;
+  flex-direction: column;
+
+  @include respond-to(sm) {
+    padding: 16px;
+  }
+}
+
+.ant-form-item {
+  @include respond-to(sm) {
+    margin-bottom: 16px;
+  }
+}

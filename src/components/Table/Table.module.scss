@@ -1,0 +1,50 @@
+@import "../../style/global.scss";
+
+.box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  margin-top: 50px;
+
+  .table_head {
+    display: flex;
+    width: 90%;
+    align-items: center;
+    justify-content: space-between;
+    height: 41px;
+    border-radius: 10px;
+    background: #005fae;
+    margin-bottom: 20px;
+    color: $color-white;
+    box-shadow: 0 4px 8px 1px  rgba(0, 0, 0, 0.2);
+
+    .table_cell_wrapper {
+      border-right: 2px solid #fff;
+      width: 100%;
+      &:last-child {
+        border-right: none;
+      }
+
+      .table_cell {
+        border-bottom: none;
+        color: $color-white;
+        font-family: $mts-wide-b;
+        font-size: 16px;
+       
+        padding: 0 20px;
+        line-height: 41px;
+       
+        
+      }
+    }
+    
+    .check {
+      border-right: 2px solid #fff  ;
+    }
+
+    
+
+  }
+}

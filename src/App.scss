@@ -1,0 +1,143 @@
+@import "./style/global.scss";
+@import "src/style/screen-size.scss";
+
+:root[data-theme="light-MGTS"] {
+  --primary-color: #007ee8;
+  --text-color: #000;
+  --color-redo: linear-gradient(150deg, #58b3ff, #005fae);
+  --background-color: #fff;
+  --background-color-secondary: #fff;
+  --background-notif-window: #ffffff;
+  --color-button: #005fae;
+  --button-hover: linear-gradient(150deg, #58b3ff, #005fae);
+  --fill-icons: #666666;
+  --fill-icon-service: #005fae;
+  --fill-icon-service-hover: url(#myGradient);
+  --nav-hover: linear-gradient(
+      0deg,
+      linear-gradient(150deg, #58b3ff, #005fae),
+      linear-gradient(150deg, #58b3ff, #005fae)
+    )
+    no-repeat right bottom / 0 2px;
+  --gradient: linear-gradient(150deg, #58b3ff, #005fae);
+  --logo: url("assets/icons/mgts.svg");
+  --redo-logo: url("assets/icons/redo.svg");
+  --mobile-person-widget: #005fae;
+  --notifications-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+    0px 12px 20px 0px rgba(0, 0, 0, 0.14);
+  --notifications-window-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.12),
+    0px 8px 16px 0px rgba(0, 0, 0, 0.08);
+
+  --notification-in-window-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.08),
+    0px 4px 16px 0px rgba(0, 0, 0, 0.08);
+}
+
+:root[data-theme="dark-MGTS"] {
+  --primary-color: #007ee8;
+  --background-color: #404040;
+  --text-color: #ffffff;
+  --background-color-input: #262626;
+  --background-color-body: #262626;
+  --background-color-secondary: #595959;
+  --background-notif-window: #3f3f3f;
+  --background-image: "assets/icons/allProductsHover.svg";
+  --color-button: #000;
+  --button-hover: #313131;
+  --fill-icons: #ffffff;
+  --fill-icon-service: #fff;
+  --fill-icon-service-hover: #fff;
+  --color-redo: linear-gradient(150deg, #58b3ff, #005fae);
+  --nav-hover: linear-gradient(
+      0deg,
+      linear-gradient(150deg, #58b3ff, #005fae),
+      linear-gradient(150deg, #58b3ff, #005fae)
+    )
+    no-repeat right bottom / 0 2px;
+  --gradient: linear-gradient(150deg, #58b3ff, #005fae);
+  --logo: url("assets/icons/mgts.svg");
+  --redo-logo: url("assets/icons/redo.svg");
+  --mobile-person-widget: #ffffff;
+  --notifications-shadow: 0px 1px 25px 0px rgba(0, 0, 0, 0.7);
+  --notifications-window-shadow: 0px 1px 25px 0px rgba(0, 0, 0, 0.8);
+  --notification-in-window-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+:root[data-theme="dark-MTS"] {
+  --primary-color: #ff0032;
+  --background-color: #404040;
+  --text-color: #ffffff;
+  --background-color-input: #262626;
+  --background-color-body: #262626;
+  --background-color-secondary: #595959;
+  --background-notif-window: #3f3f3f;
+  --background-image: "assets/icons/allProductsHover.svg";
+  --color-button: #000;
+  --button-hover: #313131;
+  --fill-icons: #ffffff;
+  --fill-icon-service: #fff;
+  --fill-icon-service-hover: #fff;
+  --color-redo: #ff0032;
+  --nav-hover: linear-gradient(0deg, #ff0032, #ff0032) no-repeat right bottom /
+    0 2px;
+  --gradient: linear-gradient(180deg, #ff6f78 0%, #ff0032 100%);
+  --logo: url("assets/icons/mts_logo.svg");
+  --redo-logo: url("assets/icons/redo_mts.svg");
+  --mobile-person-widget: #ffffff;
+  --notifications-shadow: 0px 1px 25px 0px rgba(0, 0, 0, 0.7);
+  --notifications-window-shadow: 0px 1px 25px 0px rgba(0, 0, 0, 0.8);
+  --notification-in-window-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+:root[data-theme="light-MTS"] {
+  --primary-color: #ff0032;
+  --text-color: #000;
+  --background-image: "assets/icons/allProductsHover.svg";
+  --background-color: #fff;
+  --background-color-secondary: #fff;
+  --background-notif-window: #ffffff;
+  --color-button: #ff0032;
+  --button-hover: linear-gradient(180deg, #ff6f78 0%, #ff0032 100%);
+  --fill-icons: #666666;
+  --fill-icon-service: #ff0032;
+  --fill-icon-service-hover: url(#myGradient);
+  --color-redo: #ff0032;
+  --nav-hover: linear-gradient(0deg, #ff0032, #ff0032) no-repeat right bottom /
+    0 2px;
+  --gradient: linear-gradient(180deg, #ff6f78 0%, #ff0032 100%);
+  --logo: url("assets/icons/mts_logo.svg");
+  --redo-logo: url("assets/icons/redo_mts.svg");
+  --mobile-person-widget: #ff0032;
+  --notifications-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+    0px 12px 20px 0px rgba(0, 0, 0, 0.14);
+  --notifications-window-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.12),
+    0px 8px 16px 0px rgba(0, 0, 0, 0.08);
+  --notification-in-window-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.08),
+    0px 4px 16px 0px rgba(0, 0, 0, 0.08);
+}
+
+:root {
+  --background: #ffffff;
+  --text-primary: #0f0f0f;
+  --text-secondary: #4e4e4e;
+  --accent: #dfb017;
+  --accent-hover: #cea315;
+  --border: #1f1e1e;
+  --shadow: 7px 15px 13px -4px #00000056;
+  overflow-x: hidden;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+    height: 7px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $border-color;
+    border-radius: 5px;
+  }
+}
+
+
