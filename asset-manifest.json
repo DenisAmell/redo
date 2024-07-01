@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/redo/static/css/main.f13869b8.css",
-    "main.js": "/redo/static/js/main.ffaf25ef.js",
+    "main.js": "/redo/static/js/main.15f56e87.js",
     "static/media/redo.svg": "/redo/static/media/redo.e206e6abe0629c1c47c6.svg",
     "static/media/redo_mts.svg": "/redo/static/media/redo_mts.f1d11557ad21918d63e4.svg",
     "static/media/MTSWide-Bold.woff": "/redo/static/media/MTSWide-Bold.425683325f9ad8a6c23e.woff",
@@ -41,10 +41,10 @@
     "static/media/crossIcon.svg": "/redo/static/media/crossIcon.c6a2ab8be134424bda4a1913ebe40441.svg",
     "index.html": "/redo/index.html",
     "main.f13869b8.css.map": "/redo/static/css/main.f13869b8.css.map",
-    "main.ffaf25ef.js.map": "/redo/static/js/main.ffaf25ef.js.map"
+    "main.15f56e87.js.map": "/redo/static/js/main.15f56e87.js.map"
   },
   "entrypoints": [
     "static/css/main.f13869b8.css",
-    "static/js/main.ffaf25ef.js"
+    "static/js/main.15f56e87.js"
   ]
 }
