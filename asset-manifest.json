@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/redo/static/css/main.4810de93.css",
-    "main.js": "/redo/static/js/main.eafe46d6.js",
+    "main.css": "/redo/static/css/main.f13869b8.css",
+    "main.js": "/redo/static/js/main.e86b0116.js",
     "static/media/redo.svg": "/redo/static/media/redo.e206e6abe0629c1c47c6.svg",
     "static/media/redo_mts.svg": "/redo/static/media/redo_mts.f1d11557ad21918d63e4.svg",
     "static/media/MTSWide-Bold.woff": "/redo/static/media/MTSWide-Bold.425683325f9ad8a6c23e.woff",
@@ -20,24 +20,31 @@
     "static/media/search.svg": "/redo/static/media/search.707d8a2684b3a729f09bba94c70b52e7.svg",
     "static/media/delete.svg": "/redo/static/media/delete.b2081a6c498272c45246809cfd2c02b1.svg",
     "static/media/save.svg": "/redo/static/media/save.5fc65c80d2801cd25ba087bb11705a57.svg",
+    "static/media/serviceIcon.svg": "/redo/static/media/serviceIcon.39cc9e4ad5e0efcfe1ae85bc00fcf66f.svg",
+    "static/media/activeCheckBox.svg": "/redo/static/media/activeCheckBox.25fc836a99a7aa68c12031ebc3f789fc.svg",
+    "static/media/filterIcon.svg": "/redo/static/media/filterIcon.474988d1fac696ab18b6aab8261acc95.svg",
     "static/media/docsSettings.svg": "/redo/static/media/docsSettings.fb1233748b6ff7ada17e71ce8415d166.svg",
+    "static/media/penIcon.svg": "/redo/static/media/penIcon.9ceff05b293b93dc0a39cf048b12b54f.svg",
     "static/media/upload.svg": "/redo/static/media/upload.88b8bef994386188b88a3c2c5558aacb.svg",
     "static/media/lists.svg": "/redo/static/media/lists.672375bc02e68d415749ad7fd591a8c1.svg",
     "static/media/profileSettings.svg": "/redo/static/media/profileSettings.556038b9ff74de4ba89ff9ba262e6e97.svg",
+    "static/media/pin.svg": "/redo/static/media/pin.13d12b422deed5f83ce389d380f190b8.svg",
     "static/media/mts_logo.svg": "/redo/static/media/mts_logo.cfe3142a78212e54b72e.svg",
+    "static/media/favorite.svg": "/redo/static/media/favorite.96689c31abc6e4de812b2f23a00dc2a9.svg",
     "static/media/mgts.svg": "/redo/static/media/mgts.b63a32e6c5202e8d086e.svg",
     "static/media/notifications.svg": "/redo/static/media/notifications.9e39ec9fe298f5e8b01c8ec2c9fd480d.svg",
     "static/media/arrowRight.svg": "/redo/static/media/arrowRight.e3537e5f545d5d23221f3f29bd343967.svg",
+    "static/media/checkbox.svg": "/redo/static/media/checkbox.e1ebf9504afbdfc6bd32bb4de98a6c7f.svg",
     "static/media/chevronDown.svg": "/redo/static/media/chevronDown.a09a8ac6df2eeeb2b63df27e77e2a618.svg",
     "static/media/chevronUp.svg": "/redo/static/media/chevronUp.6c867a4c3c52f93a7522c6b4884bad36.svg",
     "static/media/work.svg": "/redo/static/media/work.91828e61b0c283d78e7b6030527f9c03.svg",
     "static/media/crossIcon.svg": "/redo/static/media/crossIcon.c6a2ab8be134424bda4a1913ebe40441.svg",
     "index.html": "/redo/index.html",
-    "main.4810de93.css.map": "/redo/static/css/main.4810de93.css.map",
-    "main.eafe46d6.js.map": "/redo/static/js/main.eafe46d6.js.map"
+    "main.f13869b8.css.map": "/redo/static/css/main.f13869b8.css.map",
+    "main.e86b0116.js.map": "/redo/static/js/main.e86b0116.js.map"
   },
   "entrypoints": [
-    "static/css/main.4810de93.css",
-    "static/js/main.eafe46d6.js"
+    "static/css/main.f13869b8.css",
+    "static/js/main.e86b0116.js"
   ]
 }
